@@ -83,7 +83,7 @@ export default class LoginScreen extends React.Component {
 
 
 
-                    <View style={{ flexDirection: 'row', marginTop: 80 }}>
+                    <View style={{ flexDirection: 'row', marginBottom: 80 }}>
                         <View style={styles.f}>
                             <Text style={styles.fText}>f</Text>
                         </View>
