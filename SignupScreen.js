@@ -2,6 +2,7 @@ import * as React from 'react'
 import { View, Text, StyleSheet, ImageBackground } from 'react-native'
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler'
 import * as Animatable from 'react-native-animatable';
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 
 export default class SignupScreen extends React.Component {
@@ -45,6 +46,7 @@ export default class SignupScreen extends React.Component {
                     ref={this.validateInput}
                 >
                     <Text>Email address</Text>
+                    <Icon name="envelope-o" size={20} color="#ccc" style={{ position: 'absolute', top: 45, left: 20 }} />
                     <TextInput
                         style={styles.fields}
                         onChangeText={(text) => {
@@ -54,6 +56,7 @@ export default class SignupScreen extends React.Component {
                         }
                     />
                     <Text>Username</Text>
+                    <Icon name="user" size={20} color="#ccc" style={{ position: 'absolute', top: 135 , left: 20 }} />
                     <TextInput
                         style={styles.fields}
                         secureTextEntry={true}
@@ -64,6 +67,7 @@ export default class SignupScreen extends React.Component {
                         }
                     />
                     <Text>Password</Text>
+                    <Icon name="question" size={20} color="#ccc" style={{ position: 'absolute', top: 225, left: 20 }} />
                     <TextInput
                         style={styles.fields}
                         secureTextEntry={true}
@@ -74,6 +78,7 @@ export default class SignupScreen extends React.Component {
                         }
                     />
                     <Text>First Name</Text>
+                    <Icon name="user" size={20} color="#ccc" style={{ position: 'absolute', top: 318 , left: 20 }} />
                     <TextInput
                         style={styles.fields}
                         secureTextEntry={true}
@@ -84,6 +89,7 @@ export default class SignupScreen extends React.Component {
                         }
                     />
                     <Text>Last Name</Text>
+                    <Icon name="user" size={20} color="#ccc" style={{ position: 'absolute', top: 407 , left: 20 }} />
                     <TextInput
                         style={styles.fields}
                         secureTextEntry={true}
@@ -94,9 +100,10 @@ export default class SignupScreen extends React.Component {
                         }
                     />
                     <Text>Birthdate</Text>
+                    <Icon name="birthday-cake" size={20} color="#ccc" style={{ position: 'absolute', top: 497 , left: 20 }} />
                     <TextInput
                         style={styles.fields}
-                        placeholder="dd/mm/yyyy"
+                        placeholder="         dd/mm/yyyy"
                         secureTextEntry={true}
                         onChangeText={(text) => {
                             this.setState({ errMsg: '' }),
@@ -105,6 +112,7 @@ export default class SignupScreen extends React.Component {
                         }
                     />
                     <Text>Gender</Text>
+                    <Icon name="genderless" size={20} color="#ccc" style={{ position: 'absolute', top: 585 , left: 20 }} />
                     <TextInput
                         style={styles.fields}
                         secureTextEntry={true}
@@ -122,10 +130,12 @@ export default class SignupScreen extends React.Component {
 
                 <View style={{ alignItems: 'center', justifyContent: 'center' }}>
                     <TouchableOpacity
-                        onPress={() => this.onLogin()}
+                        onPress={() => alert ('HEHE')}
                         style={{ width: 200, backgroundColor: '#FFC0CB', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 40,  borderWidth: 1, borderColor: '#000000' }}
                     >
-                        <Text style={{ textAlign: 'center', color: '#000000', fontSize: 16 }}>Login</Text>
+                        <Text style={{ textAlign: 'center', color: '#000000', fontSize: 16 }}>Register</Text>
+                        
+
                     </TouchableOpacity>
 
                     <TouchableOpacity
