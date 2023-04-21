@@ -69,7 +69,7 @@ export default class LoginScreen extends React.Component {
                 <View style={{ alignItems: 'center', justifyContent: 'center', marginTop: 80 }}>
                     <TouchableOpacity 
                         onPress={() => this.onLogin()}
-                        style={{ width: 200, height: 50, backgroundColor: '#FFC0CB', alignItems: 'center', justifyContent: 'center', borderRadius: 40, marginTop: 10, borderWidth: 1, borderColor: '#000000' }}
+                        style={{ width: 200, height: 50, backgroundColor: '#FFC0CB', alignItems: 'center', justifyContent: 'center', borderRadius: 40, marginBottom: 0, borderWidth: 1, borderColor: '#000000' }}
                     >
                         <Text style={{ textAlign: 'center', color: '#000000', fontSize: 16, }}>Login</Text>
                     </TouchableOpacity>

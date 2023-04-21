@@ -2,6 +2,7 @@ import * as React from 'react'
 import { StyleSheet, View, Text, Dimensions, Image, ImageBackground } from 'react-native'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import { Ionicons } from '@expo/vector-icons'
+
 const window = Dimensions.get('window')
 
 export default class MainScreen extends React.Component {
@@ -13,14 +14,8 @@ export default class MainScreen extends React.Component {
         })
 
         return (
-            <View
-                style={{
-                    flex: 1,
-
-                }}>
-                <ImageBackground source={require('./assets/images/pink.png')} style={styles.bg}>
-                </ImageBackground>
-
+            <View style={styles.container} >
+                 <View style={styles.gradient} />
                 {/* --- TITLE BAR --- */}
                 <View
                     style={{
@@ -33,11 +28,11 @@ export default class MainScreen extends React.Component {
                         justifyContent: 'space-between'
                     }}>
                     <TouchableOpacity
-                        onPress={() => alert('Profile - Coming soon')}>
+                        onPress={() => this.props.navigation.navigate('Login')}>
                         <Ionicons
                             name="md-person"
                             size={25}
-                            color="#1976d2"
+                            color="#00000"
                         />
                     </TouchableOpacity>
                     <TouchableOpacity
@@ -45,7 +40,7 @@ export default class MainScreen extends React.Component {
                         <Ionicons
                             name="md-search"
                             size={25}
-                            color="#1976d2"
+                            color="#000000"
                         />
                     </TouchableOpacity>
                 </View>
@@ -54,8 +49,8 @@ export default class MainScreen extends React.Component {
 
                     {/* --- WELCOME SECTION --- */}
                     <View >
-                        <ImageBackground source={require('./assets/images/login.png')} style={styles.cover}>
-                        </ImageBackground>
+                        <Image source={require('./assets/images/login.png')} style={styles.cover}>
+                        </Image>
 
                         <View
                             style={{
@@ -92,38 +87,38 @@ export default class MainScreen extends React.Component {
                     >
                         <ScrollView showsHorizontalScrollIndicator={false} horizontal={true} style={{ marginTop: 10 }}>
                             <View style={{ marginLeft: 10 }}>
-                                <ImageBackground source={require('./assets/images/abe.png')} style={styles.bfp}>
-                                </ImageBackground>
+                                <Image source={require('./assets/images/abe.png')} style={styles.bfp}>
+                                </Image>
                                 <Text style={{ marginTop: 5, fontSize: 13, fontWeight: 'bold' }}>Abegail</Text>
                             </View>
 
                             <View style={{ marginLeft: 10 }}>
-                                <ImageBackground source={require('./assets/images/ashly.png')} style={styles.bfp}>
-                                </ImageBackground>
+                                <Image source={require('./assets/images/ashly.png')} style={styles.bfp}>
+                                </Image>
                                 <Text style={{ marginTop: 5, fontSize: 13, fontWeight: 'bold' }}>Ashly</Text>
                             </View>
 
                             <View style={{ marginLeft: 10 }}>
-                                <ImageBackground source={require('./assets/images/dave.png')} style={styles.bfp}>
-                                </ImageBackground>
+                                <Image source={require('./assets/images/dave.png')} style={styles.bfp}>
+                                </Image>
                                 <Text style={{ marginTop: 5, fontSize: 13, fontWeight: 'bold' }}>Dave</Text>
                             </View>
 
                             <View style={{ marginLeft: 10 }}>
-                                <ImageBackground source={require('./assets/images/jesse.png')} style={styles.bfp}>
-                                </ImageBackground>
+                                <Image source={require('./assets/images/jesse.png')} style={styles.bfp}>
+                                </Image>
                                 <Text style={{ marginTop: 5, fontSize: 13, fontWeight: 'bold' }}>Jesse</Text>
                             </View>
                         </ScrollView>
                     </View>
 
-                    <View style={{ backgroundColor: '#FFC0CB', height: 300, margin: 20, borderRadius: 10, alignItems: 'center', }} >
-                    <ImageBackground source={require('./assets/images/main.png')} style={styles.top}>
-                                </ImageBackground>
+                    <View style={{ backgroundColor: '#000000', height: 300, margin: 20, borderRadius: 10, alignItems: 'center', }} >
+                        <ImageBackground source={require('./assets/images/main.png')} style={styles.top}>
+                        </ImageBackground>
 
-                        <Text style={{ color: '#000000', fontSize: 16, marginTop: 15 }}>Safety Amidst Waves</Text>
-                        <Text style={{ color: '#000000', fontSize: 16, marginTop: 5 }}>of</Text>
-                        <Text style={{ color: '#000000', fontSize: 17, marginTop: 5, fontWeight: 'bold' }}>Fire</Text>
+                        <Text style={{ color: '#FFF', fontSize: 16, marginTop: 15 }}>Safety Amidst Waves</Text>
+                        <Text style={{ color: '#FFF', fontSize: 16, marginTop: 5 }}>of</Text>
+                        <Text style={{ color: '#FFF', fontSize: 17, marginTop: 5, fontWeight: 'bold' }}>Fire</Text>
 
                     </View>
 
@@ -137,11 +132,21 @@ export default class MainScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#b91d73'
+    },
     bg: {
         flex: 1,
         width: '100%',
-        height: '800%',
+        height: '270%',
     },
+    gradient: {
+        flex: 1,
+        backgroundColor: 'linear-gradient(to bottom, #007991, #78ffd6)',
+      },
     cover: {
         borderBottomLeftRadius: 50,
         borderBottomRightRadius: 50,
@@ -154,9 +159,9 @@ const styles = StyleSheet.create({
         borderRadius: 5,
     },
     top: {
-        height: 200, 
-        width: '100%', 
-        borderTopLeftRadius: 10, 
+        height: 200,
+        width: '100%',
+        borderTopLeftRadius: 10,
         borderTopRightRadius: 10
 
     },
