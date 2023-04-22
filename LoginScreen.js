@@ -1,8 +1,9 @@
 import * as React from 'react'
-import { View, Text, StyleSheet, ImageBackground } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler'
+import { LinearGradient } from 'expo-linear-gradient';
 import * as Animatable from 'react-native-animatable';
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 export default class LoginScreen extends React.Component {
@@ -32,9 +33,9 @@ export default class LoginScreen extends React.Component {
     render() {
         return (
 
-            <View style={styles.container}>
-                <ImageBackground source={require('./assets/images/pink.png')} style={styles.bg}>
-                </ImageBackground>
+            <LinearGradient style={styles.container}
+                colors={["#FBD3E9", "#BB377D"]}>
+
                 <Text style={{ fontSize: 25, marginTop: 20 }}>Welcome Back! </Text>
 
                 <Animatable.View
@@ -67,14 +68,14 @@ export default class LoginScreen extends React.Component {
                 </Animatable.View>
 
                 <View style={{ alignItems: 'center', justifyContent: 'center', marginTop: 80 }}>
-                    <TouchableOpacity 
+                    <TouchableOpacity
                         onPress={() => this.onLogin()}
                         style={{ width: 200, height: 50, backgroundColor: '#FFC0CB', alignItems: 'center', justifyContent: 'center', borderRadius: 40, marginBottom: 0, borderWidth: 1, borderColor: '#000000' }}
                     >
                         <Text style={{ textAlign: 'center', color: '#000000', fontSize: 16, }}>Login</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity 
+                    <TouchableOpacity
                         onPress={() => this.props.navigation.navigate('Signup')}
                         style={styles.login}
                     >
@@ -97,7 +98,7 @@ export default class LoginScreen extends React.Component {
 
                 </View>
 
-            </View>
+            </LinearGradient>
         )
     }
 }
@@ -108,11 +109,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    bg: {
-        flex: 1,
-        width: '100%',
-        height: '400%',
-    },
+
     f: {
         height: 40,
         width: 40,

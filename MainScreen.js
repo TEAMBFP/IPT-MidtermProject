@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { StyleSheet, View, Text, Dimensions, Image, ImageBackground } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import { Ionicons } from '@expo/vector-icons'
 
@@ -14,8 +15,9 @@ export default class MainScreen extends React.Component {
         })
 
         return (
-            <View style={styles.container} >
-                 <View style={styles.gradient} />
+            <LinearGradient style={styles.container}
+                colors={["#FBD3E9", "#BB377D"]}>
+
                 {/* --- TITLE BAR --- */}
                 <View
                     style={{
@@ -125,7 +127,7 @@ export default class MainScreen extends React.Component {
                 </ScrollView>
 
 
-            </View>
+            </LinearGradient>
 
         )
     }
@@ -138,15 +140,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#b91d73'
     },
-    bg: {
-        flex: 1,
-        width: '100%',
-        height: '270%',
-    },
-    gradient: {
-        flex: 1,
-        backgroundColor: 'linear-gradient(to bottom, #007991, #78ffd6)',
-      },
     cover: {
         borderBottomLeftRadius: 50,
         borderBottomRightRadius: 50,

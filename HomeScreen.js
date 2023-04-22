@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default class HomeScreen extends React.Component {
 
@@ -11,9 +12,8 @@ export default class HomeScreen extends React.Component {
     })
 
     return (
-      <View style={styles.container} >
-        <ImageBackground source={require('./assets/images/pink.png')} style={styles.bg}>
-        </ImageBackground>
+      <LinearGradient style={styles.container}
+        colors={["#FBD3E9", "#BB377D"]}>
 
 
         <Text style={styles.hello}>TEAM DROPLIST </Text>
@@ -28,7 +28,7 @@ export default class HomeScreen extends React.Component {
 
         </View>
 
-      </View>
+      </LinearGradient>
     )
 
   }
@@ -40,12 +40,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
-},
-
-bg: {
-    flex: 1,
-    width: '100%',
-    height: '270%',
   },
   hello: {
     fontSize: 40,
@@ -66,5 +60,5 @@ bg: {
     color: '#000000',
     fontSize: 18,
   },
- 
+
 });

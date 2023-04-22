@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { View, Text, StyleSheet, ImageBackground } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler'
 import * as Animatable from 'react-native-animatable';
 import Icon from 'react-native-vector-icons/FontAwesome'
@@ -38,9 +39,8 @@ export default class SignupScreen extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <ImageBackground source={require('./assets/images/pink.png')} style={styles.bg}>
-                </ImageBackground>
+            <LinearGradient style={styles.container}
+                colors={["#FBD3E9", "#BB377D"]}>
 
                 <Animatable.View
                     ref={this.validateInput}
@@ -56,7 +56,7 @@ export default class SignupScreen extends React.Component {
                         }
                     />
                     <Text>Username</Text>
-                    <Icon name="user" size={20} color="#ccc" style={{ position: 'absolute', top: 135 , left: 20 }} />
+                    <Icon name="user" size={20} color="#ccc" style={{ position: 'absolute', top: 135, left: 20 }} />
                     <TextInput
                         style={styles.fields}
                         secureTextEntry={true}
@@ -78,7 +78,7 @@ export default class SignupScreen extends React.Component {
                         }
                     />
                     <Text>First Name</Text>
-                    <Icon name="user" size={20} color="#ccc" style={{ position: 'absolute', top: 318 , left: 20 }} />
+                    <Icon name="user" size={20} color="#ccc" style={{ position: 'absolute', top: 318, left: 20 }} />
                     <TextInput
                         style={styles.fields}
                         secureTextEntry={true}
@@ -89,7 +89,7 @@ export default class SignupScreen extends React.Component {
                         }
                     />
                     <Text>Last Name</Text>
-                    <Icon name="user" size={20} color="#ccc" style={{ position: 'absolute', top: 407 , left: 20 }} />
+                    <Icon name="user" size={20} color="#ccc" style={{ position: 'absolute', top: 407, left: 20 }} />
                     <TextInput
                         style={styles.fields}
                         secureTextEntry={true}
@@ -100,7 +100,7 @@ export default class SignupScreen extends React.Component {
                         }
                     />
                     <Text>Birthdate</Text>
-                    <Icon name="birthday-cake" size={20} color="#ccc" style={{ position: 'absolute', top: 497 , left: 20 }} />
+                    <Icon name="birthday-cake" size={20} color="#ccc" style={{ position: 'absolute', top: 497, left: 20 }} />
                     <TextInput
                         style={styles.fields}
                         placeholder="         dd/mm/yyyy"
@@ -112,7 +112,7 @@ export default class SignupScreen extends React.Component {
                         }
                     />
                     <Text>Gender</Text>
-                    <Icon name="genderless" size={20} color="#ccc" style={{ position: 'absolute', top: 585 , left: 20 }} />
+                    <Icon name="genderless" size={20} color="#ccc" style={{ position: 'absolute', top: 585, left: 20 }} />
                     <TextInput
                         style={styles.fields}
                         secureTextEntry={true}
@@ -130,11 +130,11 @@ export default class SignupScreen extends React.Component {
 
                 <View style={{ alignItems: 'center', justifyContent: 'center' }}>
                     <TouchableOpacity
-                        onPress={() => alert ('HEHE')}
-                        style={{ width: 200, backgroundColor: '#FFC0CB', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 40,  borderWidth: 1, borderColor: '#000000' }}
+                        onPress={() => alert('HEHE')}
+                        style={{ width: 200, backgroundColor: '#FFC0CB', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 40, borderWidth: 1, borderColor: '#000000' }}
                     >
                         <Text style={{ textAlign: 'center', color: '#000000', fontSize: 16 }}>Register</Text>
-                        
+
 
                     </TouchableOpacity>
 
@@ -148,7 +148,7 @@ export default class SignupScreen extends React.Component {
 
                 </View>
 
-            </View>
+            </LinearGradient>
         )
     }
 }
@@ -158,12 +158,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-    },
-    bg: {
-
-        flex: 1,
-        width: '100%',
-        height: '5000%',
     },
     fields: {
         height: 45,
