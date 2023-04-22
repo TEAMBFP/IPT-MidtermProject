@@ -16,7 +16,7 @@ export default class HomeScreen extends React.Component {
         colors={["#FBD3E9", "#BB377D"]}>
 
 
-        <Text style={styles.hello}>TEAM DROPLIST </Text>
+        <Text style={styles.hello}>TEAM BFP </Text>
 
         <View style={{ flexDirection: 'row', margin: 200, paddingVertical: 20 }}>
           <TouchableOpacity
@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
   hello: {
     fontSize: 40,
     fontWeight: 'bold',
+    marginTop: 500,
   },
   login: {
     backgroundColor: '#FFC0CB',

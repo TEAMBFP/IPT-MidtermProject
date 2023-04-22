@@ -36,7 +36,7 @@ export default class LoginScreen extends React.Component {
             <LinearGradient style={styles.container}
                 colors={["#FBD3E9", "#BB377D"]}>
 
-                <Text style={{ fontSize: 25, marginTop: 20 }}>Welcome Back! </Text>
+                <Text style={{ fontSize: 25, marginTop: 250 }}>Welcome Back! </Text>
 
                 <Animatable.View
                     ref={this.validateInput}
@@ -67,10 +67,10 @@ export default class LoginScreen extends React.Component {
 
                 </Animatable.View>
 
-                <View style={{ alignItems: 'center', justifyContent: 'center', marginTop: 80 }}>
+                <View style={{ alignItems: 'center', justifyContent: 'center', marginBottom: 80 }}>
                     <TouchableOpacity
                         onPress={() => this.onLogin()}
-                        style={{ width: 200, height: 50, backgroundColor: '#FFC0CB', alignItems: 'center', justifyContent: 'center', borderRadius: 40, marginBottom: 0, borderWidth: 1, borderColor: '#000000' }}
+                        style={{ width: 200, height: 50, backgroundColor: '#FFC0CB', alignItems: 'center', justifyContent: 'center', borderRadius: 40, marginBottom: 10, borderWidth: 1, borderColor: '#000000' }}
                     >
                         <Text style={{ textAlign: 'center', color: '#000000', fontSize: 16, }}>Login</Text>
                     </TouchableOpacity>
@@ -84,7 +84,7 @@ export default class LoginScreen extends React.Component {
 
 
 
-                    <View style={{ flexDirection: 'row', marginBottom: 80 }}>
+                    <View style={{ flexDirection: 'row', marginBottom:50 }}>
                         <View style={styles.f}>
                             <Text style={styles.fText}>f</Text>
                         </View>
